@@ -1,0 +1,107 @@
+sglang_omni/models/qwen3_asr/engine_builder.py
+  s_31b6e630a54788::t_03edda0faa09dd 121-124,127,129
+  s_31b6e630a54788::t_e173802fa4caeb 21
+sglang_omni/models/higgs_tts/config.py
+  s_1dbe0ed085e672::t_bd323f71d6c993 14
+  s_1dbe0ed085e672::t_ca71069723b2b7 71,83,96-97,102,108-114
+sglang_omni/models/higgs_tts/engine_builder.py
+  s_1dbe0ed085e672::t_54e7f823d92cd7 86-91
+sglang_omni/models/higgs_tts/stages.py
+  s_1dbe0ed085e672::t_25576bdb00e14b 381,384,393-395,548
+  s_1dbe0ed085e672::t_cad66917f19973 469,482,502
+  s_1dbe0ed085e672::t_87884ab9f69113 392
+  s_1dbe0ed085e672::t_f16cb473b5f932 510,521,527-530
+  s_1dbe0ed085e672::t_7d108e9ea933f5 549-556
+  s_1dbe0ed085e672::t_980e2b98767a73 402-405
+  s_1dbe0ed085e672::t_5c3e346ac67517 586-596
+sglang_omni/platforms/interface.py
+  s_31b6e630a54788::t_042139b4a5db96 55-63
+  s_1dbe0ed085e672::t_26b1da0d85299a 64-74
+  s_1dbe0ed085e672::t_ebb1a26ade993c 75-81
+sglang_omni/models/higgs_tts/sampler.py
+  s_1dbe0ed085e672::t_b16a4d83b26ff0 109,113-114
+  s_1dbe0ed085e672::t_de9466ab939cbe 19
+  s_1dbe0ed085e672::t_a1bffeaaffc74c 32-79
+  s_1dbe0ed085e672::t_9846de3089fd8d 317,320
+sglang_omni/platforms/npu.py
+  s_1dbe0ed085e672::t_11dd6b4ac65420 22,29-32
+  s_ba4ebbc6911f96::t_9da874e0184249 23-28
+sglang_omni/platforms/cuda.py
+  s_1dbe0ed085e672::t_ecb594e699e105 91-97
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "e6b9ff08f7ea480cced4be325f29026826eddb5d",
+  "prompts": {},
+  "humans": {
+    "h_e7288db8f26037": {
+      "author": "chx96642264 <chx96642264@163.com>"
+    }
+  },
+  "sessions": {
+    "s_1dbe0ed085e672": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a8449939d9f7eca3991898c",
+        "model": "DeepSeek-V4-Flash-Official"
+      },
+      "human_author": "chx96642264 <chx96642264@163.com>",
+      "custom_attributes": {
+        "dedupe_key": "6a8449939d9f7eca3991898c:6a8457b19d9f7eca39918f27:afterEdit:5b26300c",
+        "source_scene": "agent",
+        "tool_id": "icube:applyChatSnapshotPatch",
+        "external_session_id": "6a8449939d9f7eca3991898c",
+        "operation_id": "6a8457b19d9f7eca39918f27",
+        "edit_kind": "file_edit",
+        "client_type": "ide",
+        "tool_use_id": "6a8457b19d9f7eca39918f27",
+        "runtime_client": "trae-tob-git-ai",
+        "tool_type": "builtin",
+        "session_id": "6a8449939d9f7eca3991898c"
+      }
+    },
+    "s_31b6e630a54788": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a8828d19d9f7eca399192d7",
+        "model": "DeepSeek-V4-Flash-Official"
+      },
+      "human_author": "chx96642264 <chx96642264@163.com>",
+      "custom_attributes": {
+        "source_scene": "agent",
+        "runtime_client": "trae-tob-git-ai",
+        "session_id": "6a8828d19d9f7eca399192d7",
+        "tool_type": "builtin",
+        "client_type": "ide",
+        "tool_use_id": "6a8838c89d9f7eca39919383",
+        "edit_kind": "file_edit",
+        "operation_id": "6a8838c89d9f7eca39919383",
+        "dedupe_key": "6a8828d19d9f7eca399192d7:6a8838c89d9f7eca39919383:afterEdit:537c0479",
+        "external_session_id": "6a8828d19d9f7eca399192d7",
+        "tool_id": "icube:applyChatSnapshotPatch"
+      }
+    },
+    "s_ba4ebbc6911f96": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a844a999d9f7eca399189ec",
+        "model": "DeepSeek-V4-Flash-Official"
+      },
+      "human_author": "chx96642264 <chx96642264@163.com>",
+      "custom_attributes": {
+        "edit_kind": "file_edit",
+        "session_id": "6a844a999d9f7eca399189ec",
+        "tool_id": "icube:applyChatSnapshotPatch",
+        "external_session_id": "6a844a999d9f7eca399189ec",
+        "client_type": "ide",
+        "operation_id": "6a8811729d9f7eca399191db",
+        "source_scene": "agent",
+        "tool_use_id": "6a8811729d9f7eca399191db",
+        "dedupe_key": "6a844a999d9f7eca399189ec:6a8811729d9f7eca399191db:afterEdit:537c0479",
+        "runtime_client": "trae-tob-git-ai",
+        "tool_type": "builtin"
+      }
+    }
+  }
+}
