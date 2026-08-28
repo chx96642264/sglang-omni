@@ -1,0 +1,40 @@
+sglang_omni/models/higgs_tts/config.py
+  s_13c79928f3be29::t_5fad72675567d1 48
+  s_13c79928f3be29::t_abcb64ce34cf64 57-58
+  s_13c79928f3be29::t_288ca2682556c6 72
+  s_13c79928f3be29::t_b42b398ba8e232 74-76
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "d9bed0d5a14fe305307f5d135aaf11e138bb2dcf",
+  "prompts": {},
+  "humans": {
+    "h_e7288db8f26037": {
+      "author": "chx96642264 <chx96642264@163.com>"
+    }
+  },
+  "sessions": {
+    "s_13c79928f3be29": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a8d4c7d9d9f7eca3991940e",
+        "model": "DeepSeek-V4-Flash-Official"
+      },
+      "human_author": "chx96642264 <chx96642264@163.com>",
+      "custom_attributes": {
+        "client_type": "ide",
+        "external_session_id": "6a8d4c7d9d9f7eca3991940e",
+        "operation_id": "6a9046942cd869d1c97d7ad5",
+        "tool_type": "builtin",
+        "tool_use_id": "6a9046942cd869d1c97d7ad5",
+        "runtime_client": "trae-tob-git-ai",
+        "dedupe_key": "6a8d4c7d9d9f7eca3991940e:6a9046942cd869d1c97d7ad5:afterEdit:5f31313a",
+        "source_scene": "agent",
+        "tool_id": "icube:applyChatSnapshotPatch",
+        "session_id": "6a8d4c7d9d9f7eca3991940e",
+        "edit_kind": "file_edit"
+      }
+    }
+  }
+}
