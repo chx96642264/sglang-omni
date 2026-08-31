@@ -1,0 +1,43 @@
+tests/unit_test/higgs_tts/test_npu_adaptation.py
+  s_13c79928f3be29::t_8fb426237b118d 114,116
+  s_13c79928f3be29::t_6acf89b83a0814 106-107
+sglang_omni/models/higgs_tts/config.py
+  s_13c79928f3be29::t_7aad5d00b95a14 50
+  s_13c79928f3be29::t_45f1fc38b7e083 60-62
+  s_13c79928f3be29::t_4d29334c5628b7 108-114
+  s_13c79928f3be29::t_8cbf8b364671e2 76
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "7f5f3e28462efa92b7bf546f01819832ac49a40f",
+  "prompts": {},
+  "humans": {
+    "h_e7288db8f26037": {
+      "author": "chx96642264 <chx96642264@163.com>"
+    }
+  },
+  "sessions": {
+    "s_13c79928f3be29": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a8d4c7d9d9f7eca3991940e",
+        "model": "DeepSeek-V4-Flash-Official"
+      },
+      "human_author": "chx96642264 <chx96642264@163.com>",
+      "custom_attributes": {
+        "external_session_id": "6a8d4c7d9d9f7eca3991940e",
+        "runtime_client": "trae-tob-git-ai",
+        "client_type": "ide",
+        "tool_type": "builtin",
+        "tool_use_id": "6a9046942cd869d1c97d7ad5",
+        "edit_kind": "file_edit",
+        "source_scene": "agent",
+        "session_id": "6a8d4c7d9d9f7eca3991940e",
+        "dedupe_key": "6a8d4c7d9d9f7eca3991940e:6a9046942cd869d1c97d7ad5:afterEdit:5f31313a",
+        "operation_id": "6a9046942cd869d1c97d7ad5",
+        "tool_id": "icube:applyChatSnapshotPatch"
+      }
+    }
+  }
+}
