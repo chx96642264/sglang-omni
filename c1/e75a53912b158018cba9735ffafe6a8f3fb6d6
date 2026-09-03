@@ -1,0 +1,51 @@
+sglang_omni/models/higgs_tts/__init__.py
+  h_e7288db8f26037 23-24
+sglang_omni/models/higgs_tts/stages.py
+  s_18b194d7f035bc::t_d7f81a0fa7d4c6 404-405
+sglang_omni/models/higgs_tts/sampler.py
+  s_18b194d7f035bc::t_ebb0923404d2b8 292,295
+  s_18b194d7f035bc::t_e05c78322ff67d 36-38,41-47,49,52
+sglang_omni/models/higgs_tts/npu_fallback.py
+  s_18b194d7f035bc::t_4dd9bdfc057891 1,3-9,14-24,29-38
+  h_e7288db8f26037 2,10,12-13,25,27-28
+  s_18b194d7f035bc::t_4499d419526934 11,26
+tests/unit_test/higgs_tts/test_npu_adaptation.py
+  s_18b194d7f035bc::t_af3ec51f168553 61
+  s_18b194d7f035bc::t_92ec8c9e8e318f 14
+  s_18b194d7f035bc::t_a902d134b2237f 41-42,48
+  s_18b194d7f035bc::t_b70ee756b727f3 76,79
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "c1e75a53912b158018cba9735ffafe6a8f3fb6d6",
+  "prompts": {},
+  "humans": {
+    "h_e7288db8f26037": {
+      "author": "chx96642264 <chx96642264@163.com>"
+    }
+  },
+  "sessions": {
+    "s_18b194d7f035bc": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a96c5a72cd869d1c97d7fb9",
+        "model": "glm-5.3"
+      },
+      "human_author": "chx96642264 <chx96642264@163.com>",
+      "custom_attributes": {
+        "edit_kind": "file_edit",
+        "session_id": "6a96c5a72cd869d1c97d7fb9",
+        "client_type": "ide",
+        "dedupe_key": "6a96c5a72cd869d1c97d7fb9:6a9925d42cd869d1c97d813f:afterEdit:ad5d92ce",
+        "tool_type": "builtin",
+        "source_scene": "agent",
+        "runtime_client": "trae-tob-git-ai",
+        "tool_use_id": "6a9925d42cd869d1c97d813f",
+        "tool_id": "icube:applyChatSnapshotPatch",
+        "external_session_id": "6a96c5a72cd869d1c97d7fb9",
+        "operation_id": "6a9925d42cd869d1c97d813f"
+      }
+    }
+  }
+}
