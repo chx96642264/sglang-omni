@@ -1,0 +1,45 @@
+tests/unit_test/higgs_tts/test_npu_adaptation.py
+  s_18b194d7f035bc::t_59c1863939babc 222,227
+  s_18b194d7f035bc::t_d8455f24fd9927 234
+sglang_omni/models/higgs_tts/__init__.py
+  s_18b194d7f035bc::t_b2d42e9ec55f42 23
+sglang_omni/models/higgs_tts/stages.py
+  s_18b194d7f035bc::t_aeb1c6fb6416b0 554-555
+  s_18b194d7f035bc::t_e5f33818a6e60f 553
+sglang_omni/models/higgs_tts/npu_fallback.py
+  h_e7288db8f26037 24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "aacc6ef075459b1828b8418e6a2be86a5f88c968",
+  "prompts": {},
+  "humans": {
+    "h_e7288db8f26037": {
+      "author": "chx96642264 <chx96642264@163.com>"
+    }
+  },
+  "sessions": {
+    "s_18b194d7f035bc": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a96c5a72cd869d1c97d7fb9",
+        "model": "glm-5.3"
+      },
+      "human_author": null,
+      "custom_attributes": {
+        "edit_kind": "file_edit",
+        "tool_use_id": "6a9a60cb2cd869d1c97d845e",
+        "source_scene": "agent",
+        "client_type": "ide",
+        "tool_type": "builtin",
+        "runtime_client": "trae-tob-git-ai",
+        "dedupe_key": "6a96c5a72cd869d1c97d7fb9:6a9a60cb2cd869d1c97d845e:afterEdit:882c8c96",
+        "tool_id": "icube:applyChatSnapshotPatch",
+        "operation_id": "6a9a60cb2cd869d1c97d845e",
+        "session_id": "6a96c5a72cd869d1c97d7fb9",
+        "external_session_id": "6a96c5a72cd869d1c97d7fb9"
+      }
+    }
+  }
+}
