@@ -1,0 +1,39 @@
+sglang_omni/models/higgs_tts/stages.py
+  s_18b194d7f035bc::t_aeb1c6fb6416b0 554-556
+tests/unit_test/higgs_tts/test_npu_adaptation.py
+  s_18b194d7f035bc::t_d8455f24fd9927 238
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "93f33ad01fde2fbc3d7d0df4431d37616a798d28",
+  "prompts": {},
+  "humans": {
+    "h_e7288db8f26037": {
+      "author": "chx96642264 <chx96642264@163.com>"
+    }
+  },
+  "sessions": {
+    "s_18b194d7f035bc": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a96c5a72cd869d1c97d7fb9",
+        "model": "glm-5.3"
+      },
+      "human_author": "chx96642264 <chx96642264@163.com>",
+      "custom_attributes": {
+        "edit_kind": "file_edit",
+        "client_type": "ide",
+        "external_session_id": "6a96c5a72cd869d1c97d7fb9",
+        "tool_type": "builtin",
+        "operation_id": "6a9a3c252cd869d1c97d8328",
+        "dedupe_key": "6a96c5a72cd869d1c97d7fb9:6a9a3c252cd869d1c97d8328:afterEdit:882c8c96",
+        "tool_id": "icube:applyChatSnapshotPatch",
+        "source_scene": "agent",
+        "runtime_client": "trae-tob-git-ai",
+        "session_id": "6a96c5a72cd869d1c97d7fb9",
+        "tool_use_id": "6a9a3c252cd869d1c97d8328"
+      }
+    }
+  }
+}
