@@ -120,6 +120,61 @@ def test_xpu_tp_rejects_a_gpu_id_outside_the_mask() -> None:
         )
 
 
+def test_npu_tp_process_env_emits_no_visibility_variable() -> None:
+    """NPU TP must keep every card visible: per-rank narrowing hides peers
+    from HCCL discovery and hangs rendezvous, unlike CUDA_VISIBLE_DEVICES with
+    NCCL. With nothing inherited the hook narrows nothing and emits no
+    visibility variable at all."""
+    from sglang_omni.platforms.npu import NPUOmniPlatform
+
+    env = NPUOmniPlatform().get_stage_process_env(_tp_spec(gpu_id=1), {})
+
+    assert "CUDA_VISIBLE_DEVICES" not in env
+    assert "ASCEND_RT_VISIBLE_DEVICES" not in env
+    assert env == {"SGLANG_ENABLE_TP_MEMORY_INBALANCE_CHECK": "false"}
+
+
+def test_npu_tp_preserves_a_visible_devices_list_that_covers_the_whole_group() -> None:
+    from sglang_omni.platforms.npu import NPUOmniPlatform
+
+    env = NPUOmniPlatform().get_stage_process_env(
+        _tp_spec(gpu_id=1), {"ASCEND_RT_VISIBLE_DEVICES": "4,5"}
+    )
+
+    assert "ASCEND_RT_VISIBLE_DEVICES" not in env
+    assert env == {"SGLANG_ENABLE_TP_MEMORY_INBALANCE_CHECK": "false"}
+
+
+def test_npu_tp_rejects_a_visible_devices_list_too_small_for_the_group() -> None:
+    """A single-card list cannot host a 2-rank stage. Narrowing it would
+    silently move the stage to physical 0..1, so fail loudly instead."""
+    from sglang_omni.platforms.npu import NPUOmniPlatform
+
+    with pytest.raises(ValueError, match="exposes 1"):
+        NPUOmniPlatform().get_stage_process_env(
+            _tp_spec(gpu_id=1), {"ASCEND_RT_VISIBLE_DEVICES": "3"}
+        )
+
+
+def test_npu_tp_rejects_a_gpu_id_outside_the_visible_devices() -> None:
+    """gpu_id indexes into the variable's numbering, not the host's."""
+    from sglang_omni.platforms.npu import NPUOmniPlatform
+
+    with pytest.raises(ValueError, match="exposes only 2 cards"):
+        NPUOmniPlatform().get_stage_process_env(
+            _tp_spec(gpu_id=2), {"ASCEND_RT_VISIBLE_DEVICES": "4,5"}
+        )
+
+
+def test_npu_tp_process_env_requires_gpu_id() -> None:
+    from sglang_omni.platforms.npu import NPUOmniPlatform
+
+    with pytest.raises(ValueError, match="requires a GPU id"):
+        NPUOmniPlatform().get_stage_process_env(
+            StageLaunchConfig(stage_name="thinker", tp_size=2), {}
+        )
+
+
 def test_spawn_env_leaves_a_group_affinity_mask_intact_for_the_child(
     monkeypatch,
 ) -> None:

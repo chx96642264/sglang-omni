@@ -16,6 +16,7 @@ import sglang_omni.platforms.xpu as xpu_platform
 from sglang_omni.platforms.cpu import CPUOmniPlatform
 from sglang_omni.platforms.cuda import CUDAOmniPlatform
 from sglang_omni.platforms.interface import OmniPlatform
+from sglang_omni.platforms.npu import NPUOmniPlatform
 from sglang_omni.platforms.rocm import ROCMOmniPlatform
 from sglang_omni.platforms.xpu import XPUOmniPlatform
 
@@ -46,6 +47,14 @@ def test_cpu_platform_needs_no_stage_process_env() -> None:
     spec = SimpleNamespace(stage_name="cpu", tp_size=2, gpu_id=None)
 
     assert CPUOmniPlatform().get_stage_process_env(spec, {}) == {}
+
+
+def test_npu_non_tp_stage_needs_no_process_env() -> None:
+    """Process topology is platform-agnostic for non-TP stages: NPU needs no
+    env override there, so colocated/isolated stages spawn unchanged."""
+    spec = SimpleNamespace(stage_name="vocoder", tp_size=1, gpu_id=0)
+
+    assert NPUOmniPlatform().get_stage_process_env(spec, {}) == {}
 
 
 def test_rocm_platform_keeps_cuda_compatible_tp_mapping() -> None:
